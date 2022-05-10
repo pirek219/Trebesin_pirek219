@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper,notitlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\begin{document}
+
+\title{Databáze trestně stíhaných osob}
+\author{ Vystavilová Tereza,
+ Hrstka Lukáš,
+ Pírek Tadeáš,
+ Čamek Filip }
+\date{10.11.2021}
+
+\maketitle
+
+\begin{abstract}
+Tato databáze byla vytvořena celým týmem a testuje základní znalosti \LaTeX{}, databází a práci ve skupině.
+
+V týmu jsme pracovali samostatně a využívali všechny dostupné materiály na Moodle nebo internetu. Všechny licenční a právní náležitosti jsou zapsány v této práci.
+
+Těm, který není tento dokument určen nemají žádné právo na využití obsahu tohoto dokumentu.
+
+Veškerá data osob a předmětů jsou fiktivní a nezakládají se na reálných osobách. 
+\end{abstract}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+
+\section{Popis databáze}
+Databáze obsahuje data o trestně stíhaných osobách - jména, délka trestu, důvod trestu atd. Je postavena profesionálním týmem na jazyce MySQL a compileru Overleaf pomocí \LaTeX .
+
+\newpage
+\section{Licenční informace a HW požadavky}
+\subsection{Licence}
+Google Chrome - Chrome Enterprise license
+\newline Mozilla Firefox - Mozilla Public License 2.0
+\subsection{Hardware}
+\subsection{Software}
+Google Chrome, Mozilla Firefox - vyhledávání informací
+\newline Overleaf - kompilace jazyku MySQL a \LaTeX
+
+\newpage
+\section{Enumerizace hodnot}
+\subsection{Normované enumerizace}
+\subsection{Custom enumerizace}
+\newpage
+\section{Databázová struktura}
+\subsection{ER diagram}
+\begin{center}
+\includegraphics[width=2.5in,height=2.5in]{Seminární_práce_pololet_odevzdání_ER_diagram_Vystavilová_Pírek_Čamek_Hrstka.png}
+\end{center}
+\subsection{Tabulka person}
+\subsubsection{Struktura}
+Tabulka obsahuje základní údaje o člověku ve vazbě jako např. Křestní jméno a příjmení, pohlaví, věk atd.
+\subsubsection{Provázání tabulky}
+Tabulka je provázaná spolu s tabulkou address a facility.
+\subsection{Tabulka facility}
+\subsubsection{Struktura}
+Tabulka obsahuje údaje o daném zařízení jako např. název zařízení, typ zařízení, odpovědná osoba atd. 
+\subsubsection{Provázání tabulky}
+S tabulkou jsou provázány tabulky address a person.
+\subsection{Tabulka court}
+\subsubsection{Struktura}
+Tabulka obsahuje základní údaje o daném soudu např. odpovědnou osobu, adresu, název soudu atd.
+\subsubsection{Provázání tabulky}
+S tabulkou je provázaná tabulka address.
+\subsection{Tabulka address}
+\subsubsection{Struktura}
+Tabulka obsahuje údaje o adrese dané osoby či místa.
+\subsubsection{Provázání tabulky}
+Tabulka je provázaná s tabulkami person, facility a court.
+
+
+
+\end{document}
